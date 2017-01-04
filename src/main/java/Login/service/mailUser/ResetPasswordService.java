@@ -28,12 +28,7 @@ public class ResetPasswordService {
         SimpleMailMessage mail = new SimpleMailMessage();
         Random gen = new Random();
         CharSequence code;
-        code = gen.toString();
-        user.setPasswordHash(new BCryptPasswordEncoder().encode(code));
-        mail.setTo(user.getEmail());
-        mail.setSubject("Password reset");
-        mail.setText("Your new password is ");
-        javaMailSender.send(mail);
-    }
+
+        }
 
 }
